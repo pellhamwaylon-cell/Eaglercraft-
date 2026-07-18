@@ -27,21 +27,26 @@
         <script>
             setTimeout(function() {
                 document.getElementById('loading-screen').style.display = 'none';
-                    document.getElementById('content').style.display = 'block';
+                var contentDiv = document.getElementById('content');
+                if (contentDiv) {
+                    contentDiv.style.display = 'block';
+                }
         }, 10000); 
         </script>
         
     </div>
-    <div id="game-frame">
-        <div id="credits">
-            <a href="https://raw.githubusercontent.com/RavenBrothers/Eaglercraft-1.14/blob/main/CREDITS.TXT" target="_blank">
-                <img src="https://raw.githubusercontent.com/RavenBrothers/Eaglercraft-1.14/blob/main/1.14.4/assets/eagler/gui/credits.txt.gui.eagler.png" usemap="#image-map" alt="CREDITS">
-            </a>
-        </div>
+    <div id="content" style="display: none;">
+        <div id="game-frame">
+            <div id="credits">
+                <a href="https://raw.githubusercontent.com/RavenBrothers/Eaglercraft-1.14/blob/main/CREDITS.TXT" target="_blank">
+                    <img src="https://raw.githubusercontent.com/RavenBrothers/Eaglercraft-1.14/blob/main/1.14.4/assets/eagler/gui/credits.txt.gui.eagler.png" usemap="#image-map" alt="CREDITS">
+                </a>
+            </div>
 
-        <map name="image-map">
+            <map name="image-map">
 <area shape="rect" coords="10,10,50,50" alt="CREDITS" href="https://raw.githubusercontent.com/RavenBrothers/Eaglercraft-1.14/blob/main/CREDITS.TXT" target="_blank">
-        </map>
+            </map>
+        </div>
     </div>
 </body>
 </html>
